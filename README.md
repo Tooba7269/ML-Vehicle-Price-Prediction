@@ -66,7 +66,7 @@ Split: 80% train → 10% val + 10% test
 
 📊 Model Performance
 Model	               R² Score (Test)	 Mean Training R²	 Score Difference
-Linear Regression	   0.7891	           0.7919	            0.0028
+Linear Regression	  0.7891	          0.7919	          0.0028
 Decision Tree	       0.9325	           0.9333	            0.0008
 KNN Regressor	       0.8880	           0.9111	            0.0231
 
