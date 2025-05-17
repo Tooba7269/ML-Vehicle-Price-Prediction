@@ -1,101 +1,113 @@
-# 🚗 Car Price Prediction Using Machine Learning
+# 🚗 Used Car Price Prediction using Machine Learning
 
-### 👤 By Tooba Zahid
-
-This project demonstrates an end-to-end machine learning pipeline to predict used car prices based on structured automotive listing data. It covers data preprocessing, feature engineering, model selection, evaluation, and visual analysis.
+### 👤 Author: Tooba Zahid  
+A complete machine learning pipeline to predict used car prices based on structured advert data, including feature engineering, model tuning, evaluation, and comparison.
 
 ---
 
-## 📦 Dataset Access
+## 📦 Dataset
 
-The dataset used in this project is available in two formats:
+Due to size limitations, the dataset is not directly included in this repository.
 
-- 🔗 [View on Google Sheets](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)  
-  *(Download as CSV: File → Download → .csv)*
+- 🔗 [Google Sheets Link (Download as CSV)](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
+- 🗜️ `adverts.csv.zip` file included for reference
 
-- 🗜️ `adverts.csv.zip` — included in this GitHub repository
+Once downloaded, place `adverts.csv` in a folder called `data/`, or upload it directly to your Colab session.
 
-➡️ After downloading, place `adverts.csv` into a `data/` folder on your Google Drive, or upload it directly to your Colab session.
-
-In code:
 ```python
+# For Google Colab:
 from google.colab import files
 uploaded = files.upload()
-
 📁 Project Structure
-bash
+python
 Copy
 Edit
 ML-Vehicle-Price-Prediction/
-├── data/ (optional — upload in Colab instead)
-├── mlp_code.py                 # Python script
-├── README.md                   # This file
+├── mlp_code.py                     # Core Colab-exported code
+├── adverts.csv.zip                 # Zipped dataset
 ├── ML-Vehicle-Price-Prediction.Report.pdf
-🛠️ Tools Used
+├── README.md
+🛠️ Tools & Libraries
 Google Colab (Python)
 
 pandas, numpy
 
 matplotlib, seaborn
 
-scikit-learn
+scikit-learn (models, evaluation, GridSearchCV)
 
-category_encoders
+category_encoders (Target Encoding)
 
-🔬 Workflow Overview
-Load and explore the dataset
+🔬 Workflow Summary
+1. 🧼 Data Preprocessing
+Filled missing values using domain-aware logic (e.g., 2021 for "NEW" cars)
 
-Clean and preprocess data
+Removed outliers and errors in year_of_registration, price, mileage
 
-Encode categorical features (OHE + Target Encoding)
+2. 🏗️ Feature Engineering
+One-hot encoding for low-cardinality fields: condition, fuel_type
 
-Split into training, validation, and test sets
+Target encoding for high-cardinality: make, model, body_type, colour
 
-Train models:
+Rescaling using MinMaxScaler (for numeric features)
+
+3. 🔍 Modeling Approach
+Models used:
 
 Linear Regression
 
-Decision Tree Regressor (with GridSearchCV)
+Decision Tree Regressor (tuned with GridSearchCV)
 
-k-Nearest Neighbors
+k-Nearest Neighbors (KNN)
 
-Evaluate model performance (R², MAE, MSE)
+Cross-validation used to avoid overfitting
 
-Visualize and compare results
+Split: 80% train → 10% val + 10% test
 
-📊 Sample Results
-Model	R² (Test)	MAE	MSE
-Linear Regression	~0.67	~2100	~1.8M
-Decision Tree	~0.70	~1800	~1.5M
-KNN Regressor	~0.65	~2300	~2.0M
+📊 Model Performance
+Model	               R² Score (Test)	 Mean Training R²	 Score Difference
+Linear Regression	   0.7891	           0.7919	            0.0028
+Decision Tree	       0.9325	           0.9333	            0.0008
+KNN Regressor	       0.8880	           0.9111	            0.0231
 
-✅ Best Performing Model: Decision Tree Regressor (tuned with GridSearchCV)
+✅ Best Model: Decision Tree Regressor (lowest error, least overfitting)
+📉 KNN showed slight overfitting compared to others.
+
+📈 Key Visualizations
+Correlation heatmap of features
+
+Price distribution (log scale)
+
+Mileage vs Price (log-log scatter)
+
+Residual plots and prediction accuracy
+
+Feature importance from model coefficients
+
+See code or notebook for charts and explanation.
 
 ▶️ How to Run in Google Colab
-Go to Google Colab
+Open Google Colab
 
-Click File → Upload Notebook
+Upload mlp_code.py or paste into a new notebook
 
-Upload your .ipynb or .py file
-
-Upload the adverts.csv file using:
+Upload the dataset via:
 
 python
 Copy
 Edit
 from google.colab import files
 uploaded = files.upload()
-Run the code cells in sequence
+Run each block in sequence to reproduce results
 
-🚀 Future Improvements
-Convert into an interactive web app with Streamlit or Gradio
+🔧 Optional Enhancements
+Add SHAP for explainable ML
 
-Try ensemble models (Random Forest, XGBoost)
+Deploy via Streamlit for interactive prediction
 
-Add visual explainability (e.g., SHAP)
+Explore ensemble models like XGBoost or Random Forest
 
-🙋‍♀️ About the Author
-I'm Tooba Zahid, exploring real-world data problems and applying practical machine learning techniques.
-This project showcases the full ML lifecycle — from raw data to results and evaluation — using Google Colab.
+🙋 About
+This project was developed for academic coursework focused on real-world machine learning challenges. It demonstrates end-to-end model development, with emphasis on clean feature engineering, evaluation methodology, and visual insight.
 
-Thanks for visiting!
+Thank you for visiting!
