@@ -5,15 +5,12 @@ Welcome to the repository for my Machine Learning coursework project for **Unit 
 ---
 
 ## 📁 Project Structure
+File / Folder	Description
+mlp_code.py	Full Python script containing the complete ML pipeline
+adverts.csv.zip	Compressed dataset file (large size; also shared via Google Sheets)
+report.pdf	Final structured coursework report with code, results & insights
+README.md	This project overview and documentation
 
-├── mlp_code.py # Complete ML pipeline (Python script version)
-├── adverts.csv.zip # Zipped dataset (large size; alternative access provided)
-├── report.pdf # Final structured coursework report
-├── README.md # You're here!
-
-yaml
-Copy
-Edit
 
 ---
 
