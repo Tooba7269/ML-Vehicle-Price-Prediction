@@ -100,7 +100,3 @@ This project was built to practice applied ML techniques with real-world structu
 It demonstrates the full pipeline from raw data → clean features → trained model → evaluation and insight.
 
 Thanks for visiting! ⭐
-
-yaml
-Copy
-Edit
