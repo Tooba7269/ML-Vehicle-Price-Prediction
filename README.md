@@ -19,7 +19,7 @@ Once downloaded, extract and place `adverts.csv` in a folder named `data/`, or u
 # For Google Colab
 from google.colab import files
 uploaded = files.upload()
-📁 Project Structure
+## 📁 Project Structure
 python
 Copy
 Edit
@@ -39,20 +39,20 @@ scikit-learn (models, GridSearchCV, metrics)
 
 category_encoders (Target Encoding)
 
-🔬 Workflow Summary
+## 🔬 Workflow Summary
 1. 🧼 Data Preprocessing
 Filled missing values using domain logic (e.g., 2021 for "NEW" cars)
 
 Removed outliers/errors in year_of_registration, mileage, and price
 
-2. 🏗 Feature Engineering
+## 2. 🏗 Feature Engineering
 One-Hot Encoding for: condition, fuel_type
 
 Target Encoding for: make, model, body_type, colour
 
 MinMax Scaling applied to numeric features
 
-3. 🧠 Modeling
+## 3. 🧠 Modeling
 Trained 3 regression models:
 
 Linear Regression
