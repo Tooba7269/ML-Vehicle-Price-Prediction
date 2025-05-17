@@ -79,24 +79,18 @@ Go to Google Colab
 
 Upload mlp_code.py or paste it into a Colab notebook
 
-Upload adverts.csv manually using:
+🔄 Workflow Summary
+1. Data Preprocessing
+Removed nulls, outliers, and incorrect values
 
-python
-Copy
-Edit
-from google.colab import files
-uploaded = files.upload()
-Run the cells to execute the full pipeline
+Handled year_of_registration, price, and mileage issues
 
-🚀 Optional Improvements
-Visualize SHAP values for explainability
+2. Feature Engineering
+One-hot encoding: condition, fuel_type
 
-Try ensemble models like Random Forest or XGBoost
+Target encoding: make, model, body_type, colour
 
-Deploy the model with Streamlit or Gradio
+MinMaxScaler applied to numeric fields
 
-🙋 About
-This project was built to practice applied ML techniques with real-world structured data.
-It demonstrates the full pipeline from raw data → clean features → trained model → evaluation and insight.
-
-Thanks for visiting! ⭐
+3. Model Training
+Linear Regression
