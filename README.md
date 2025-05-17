@@ -1,96 +1,110 @@
-# 🚗 Used Car Price Prediction using Machine Learning
+🚗 Vehicle Price Prediction using Machine Learning
 
-### 👤 Author: Tooba Zahid
-
-A complete machine learning pipeline to predict used car prices based on structured advert data. Includes feature engineering, model tuning, cross-validation, and evaluation.
+Welcome to the repository for my Machine Learning coursework project for **Unit 6G7V0015 – Machine Learning Concepts** at MMU. This end-to-end solution tackles a **real-world regression task**: predicting the selling price of vehicles based on historical car advertisement data provided by **AutoTrader**.
 
 ---
 
-## 📦 Dataset
-
-Due to file size limits, the dataset is shared externally:
-
-- 🔗 [Google Sheets (Download as CSV)](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
-- 🗜️ `adverts.csv.zip` — included in this repo
-
-Once downloaded, extract and place `adverts.csv` in a folder named `data/`, or upload it directly to Colab:
-
-```python
-# For Google Colab
-from google.colab import files
-uploaded = files.upload()
 ## 📁 Project Structure
-python
+
+├── mlp_code.py # Complete ML pipeline (Python script version)
+├── adverts.csv.zip # Zipped dataset (large size; alternative access provided)
+├── report.pdf # Final structured coursework report
+├── README.md # You're here!
+
+yaml
 Copy
 Edit
-ML-Vehicle-Price-Prediction/
-├── mlp_code.py                         # Colab-exported Python code
-├── adverts.csv.zip                     # Zipped dataset
-├── ML-Vehicle-Price-Prediction.Report.pdf
-├── README.md
-🛠️ Tools Used
-Google Colab (Python 3.x)
 
-pandas, numpy
+---
 
-matplotlib, seaborn
+## 📊 Project Overview
 
-scikit-learn (models, GridSearchCV, metrics)
+### 🎯 Objective
+Develop, evaluate, and compare predictive models for vehicle pricing using historical ad data. The task simulates the work of machine learning engineers at AutoTrader, enhancing user pricing transparency.
 
-category_encoders (Target Encoding)
+### 🧠 Techniques Used
+- **Exploratory Data Analysis (EDA)**
+- **Feature Engineering & Encoding**
+- **Data Cleaning & Outlier Handling**
+- **Model Training & Tuning**
+- **Validation, Testing, & Residual Analysis**
+- **Model Comparison & Feature Importance**
 
-## 🔬 Workflow Summary
-1. 🧼 Data Preprocessing
-Filled missing values using domain logic (e.g., 2021 for "NEW" cars)
+---
 
-Removed outliers/errors in year_of_registration, mileage, and price
+## 🔍 Dataset Description
 
-## 2. 🏗 Feature Engineering
-One-Hot Encoding for: condition, fuel_type
+- ~400,000 anonymized car adverts
+- Key features: `make`, `model`, `mileage`, `fuel type`, `year of registration`, `vehicle condition`, `price`, etc.
+- Available via:
+  - ✅ [Google Sheet Backup](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
+  - ✅ `adverts.csv.zip` file (in repo)
 
-Target Encoding for: make, model, body_type, colour
+> **Disclaimer:** This dataset is licensed for academic use **only** as part of the MMU coursework. Do not redistribute.
 
-MinMax Scaling applied to numeric features
+---
 
-## 3. 🧠 Modeling
-Trained 3 regression models:
+## 🧪 Models Implemented
 
-Linear Regression
+| Model               | Techniques Used                        | Tools & Metrics |
+|--------------------|-----------------------------------------|-----------------|
+| 📈 Linear Regression | Feature scaling, residuals analysis     | R², MAE, MSE     |
+| 🌲 Decision Tree     | GridSearchCV tuning, feature importance | R², MAE, MSE     |
+| 🤖 K-Nearest Neighbors | Distance-based, sampling optimization   | R², MAE, MSE     |
 
-Decision Tree Regressor (tuned via GridSearchCV)
+✅ All models are evaluated on **training**, **validation**, and **test sets**, with CV analysis included.
 
-k-Nearest Neighbors Regressor
+---
 
-Applied Cross-validation to measure generalization
+## 📉 Results Summary
 
-Performance tested on held-out test set
+- **Best performance**: Decision Tree with tuned hyperparameters
+- Included:
+  - Actual vs Predicted plots
+  - Residual distributions
+  - Feature importances (tree & regression coefficients)
+  - Visual model comparison using bar and line plots
 
-📊 Model Performance
-Model	R² Score (Test)	Mean Training R²	Score Difference
-Linear Regression	0.7891	0.7919	0.0028
-Decision Tree	0.9325	0.9333	0.0008
-KNN Regressor	0.8880	0.9111	0.0231
+---
 
-✅ Best Model: Decision Tree Regressor
-📉 KNN showed some overfitting (training > test)
+## 🛠 Tech Stack
 
-▶️ How to Run in Google Colab
-Go to Google Colab
+- `Python 3.10+`
+- `Pandas`, `NumPy`, `Seaborn`, `Matplotlib`
+- `Scikit-Learn`, `category_encoders`
+- Google Colab / Jupyter Notebook
 
-Upload mlp_code.py or paste it into a Colab notebook
+---
 
-🔄 Workflow Summary
-1. Data Preprocessing
-Removed nulls, outliers, and incorrect values
+## 📎 How to Reproduce
 
-Handled year_of_registration, price, and mileage issues
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/yourusername/vehicle-price-prediction.git
+   cd vehicle-price-prediction
+Install dependencies:
 
-2. Feature Engineering
-One-hot encoding: condition, fuel_type
+bash
+Copy
+Edit
+pip install -r requirements.txt
+Load the notebook or run mlp_code.py:
 
-Target encoding: make, model, body_type, colour
+bash
+Copy
+Edit
+python mlp_code.py
+⚠️ Note: If using Google Colab, ensure you mount your Drive and place adverts.csv appropriately.
 
-MinMaxScaler applied to numeric fields
+📚 Report & Evaluation
+The full PDF report is included in this repo, containing:
 
-3. Model Training
-Linear Regression
+Code snippets + outputs
+
+Explanations per spec requirement
+
+Model evaluation
+
+Visualizations
+
+Reflections
