@@ -36,7 +36,7 @@ matplotlib, seaborn
 
 scikit-learn (models, evaluation, GridSearchCV)
 
-category_encoders (Target Encoding)
+category_encoders (hotencoding, Target Encoding)
 
 🔬 Workflow Summary
 1. 🧼 Data Preprocessing
