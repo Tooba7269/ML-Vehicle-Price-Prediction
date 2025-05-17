@@ -1,4 +1,4 @@
-🚗 Vehicle Price Prediction using Machine Learning
+# 🚗 Vehicle Price Prediction using Machine Learning
 
 Welcome to the repository for my Machine Learning coursework project for **Unit 6G7V0015 – Machine Learning Concepts** at MMU. This end-to-end solution tackles a **real-world regression task**: predicting the selling price of vehicles based on historical car advertisement data provided by **AutoTrader**.
 
@@ -37,7 +37,7 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
 - ~400,000 anonymized car adverts
 - Key features: `make`, `model`, `mileage`, `fuel type`, `year of registration`, `vehicle condition`, `price`, etc.
 - Available via:
-  - ✅ [Google Sheet Backup](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
+  - ✅ [Adverts.csv (google drive link)](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
   - ✅ `adverts.csv.zip` file (in repo)
 
 > **Disclaimer:** This dataset is licensed for academic use **only** as part of the MMU coursework. Do not redistribute.
