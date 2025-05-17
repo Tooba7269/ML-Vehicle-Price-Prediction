@@ -7,10 +7,15 @@ Welcome to the repository for my Machine Learning coursework project for **Unit 
 ## 📁 Project Structure
 
 📦 Vehicle-Price-Prediction/
+
 ├── 📜 mlp_code.py         → Complete machine learning pipeline script
+
 ├── 📦 adverts.csv.zip     → Compressed dataset (large file)
+
 ├── 📄 report.pdf          → Final coursework report with visual insights
+
 ├── 📘 README.md           → Project documentation (you're here!)
+
 
 📂 Note: The dataset is also available as a Google Sheet 📎
 
@@ -82,20 +87,12 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
    git clone https://github.com/yourusername/vehicle-price-prediction.git
    cd vehicle-price-prediction
 Install dependencies:
-
-bash
-Copy
-Edit
 pip install -r requirements.txt
 Load the notebook or run mlp_code.py:
-
-bash
-Copy
-Edit
 python mlp_code.py
 ⚠️ Note: If using Google Colab, ensure you mount your Drive and place adverts.csv appropriately.
 
-📚 Report & Evaluation
+## 📚 Report & Evaluation
 The full PDF report is included in this repo, containing:
 
 Code snippets + outputs
@@ -107,3 +104,7 @@ Model evaluation
 Visualizations
 
 Reflections
+
+## Author:
+
+Tooba Zahid
