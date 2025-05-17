@@ -7,10 +7,11 @@ Welcome to the repository for my Machine Learning coursework project for **Unit 
 ## 📁 Project Structure
 
 📦 Vehicle-Price-Prediction/
-├── 📜 mlp_code.py          → Complete machine learning pipeline script
-├── 📦 adverts.csv.zip      → Compressed dataset (large file)
-├── 📄 report.pdf           → Final coursework report with visual insights
-├── 📘 README.md            → Project documentation (you're here!)
+├── 📜 mlp_code.py         → Complete machine learning pipeline script
+├── 📦 adverts.csv.zip     → Compressed dataset (large file)
+├── 📄 report.pdf          → Final coursework report with visual insights
+├── 📘 README.md           → Project documentation (you're here!)
+
 📂 Note: The dataset is also available as a Google Sheet 📎
 
 ---
