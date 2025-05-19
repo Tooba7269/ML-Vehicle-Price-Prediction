@@ -77,7 +77,7 @@ A series of diagnostic plots were generated for the Linear Regression model to a
 This plot compares the R² scores of three regression models — Linear Regression (LR), Decision Tree (DT), and k-Nearest Neighbors (kNN). It visualizes both the mean training scores and test scores, helping identify overfitting or underfitting. The Decision Tree model achieved the highest accuracy but may be slightly overfitted compared to kNN.
 
 
-![Model Comparison](./Images/Model_Comparison.png)
+![Model Comparison](Images/Model%20Comparison.png)
 
 
 
@@ -86,7 +86,7 @@ This plot compares the R² scores of three regression models — Linear Regressi
 The Q-Q plot compares the residuals to a normal distribution. Significant curvature and deviation from the diagonal line suggest non-normality in the residuals — a violation of linear regression assumptions.
 </p>
 
-<img src="./Images/qq_plot.png" width="300" alt="Q-Q Plot">
+<img src="./Images/qq_plot.png" width="400" alt="Q-Q Plot">
 
 
 
