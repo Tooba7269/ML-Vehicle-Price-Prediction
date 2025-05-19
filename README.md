@@ -74,20 +74,25 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
 ### 📸 Visual Insights
 A series of diagnostic plots were generated for the Linear Regression model to assess its assumptions and performance:
 
-🔹 Residual Distribution
-Shows the spread of prediction errors; highlights slight skewness and kurtosis.
-                      
+### 🔹 Residual Distribution (Linear Regression)
+This plot shows the distribution of residuals (errors) from the linear regression model. A sharp peak near zero indicates a generally good fit, but slight right skew suggests some under-predicted values.
+![Residual Distribution](./Images/Model Comparison Plot)
 
-🔹 Q-Q Plot of Residuals
-Tests normality visually — slight deviation from the red line indicates non-normal residuals.
-
-
-🔹 Feature Coefficients (Linear Model)
-Displays the relative importance of each feature in influencing price.
+### 🔹 Q-Q Plot of Residuals
+The Q-Q plot compares the residuals to a normal distribution. Significant curvature and deviation from the diagonal line suggest non-normality in the residuals — a violation of linear regression assumptions.
+![Q-Q Plot](./Images/qq_plot.png)
 
 
-🔹 Actual vs Predicted Plot
-Measures the closeness between predicted and actual values.
+### 🔹 Feature Importance (Linear Regression Coefficients)
+This bar plot shows which features had the largest positive or negative impact on vehicle price according to the linear regression model. Features like `model`, `reg_year`, and `body_type` are strong predictors.
+![Feature Importance](./Images/lr_feature_importance.png)
+
+
+
+### 🔹 Actual vs Predicted Values (Line Plot)
+A line plot comparing actual and predicted prices for a sample of 100 vehicles. A close alignment between lines indicates strong predictive performance, especially in low- and mid-price ranges.
+![Actual vs Predicted](./Images/actual_vs_predicted.png)
+
 
 ---
 
