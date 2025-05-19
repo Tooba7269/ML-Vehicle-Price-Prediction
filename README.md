@@ -1,6 +1,6 @@
 # 🚗 Vehicle Price Prediction using Machine Learning
 
-Welcome to the repository for my Machine Learning coursework project for **Unit 6G7V0015 – Machine Learning Concepts** at MMU. This end-to-end solution tackles a **real-world regression task**: predicting the selling price of vehicles based on historical car advertisement data provided by **AutoTrader**.
+Welcome to the repository for my Machine Learning coursework project for **Unit 6G7V0015 – Machine Learning Concepts**. This end-to-end solution tackles a **real-world regression task**: predicting the selling price of vehicles based on historical car advertisement data provided by **AutoTrader**.
 
 ---
 
@@ -17,7 +17,6 @@ Welcome to the repository for my Machine Learning coursework project for **Unit 
 ├── 📘 README.md           → Project documentation (you're here!)
 
 
-📂 Note: The dataset is also available as a Google Sheet 📎
 
 ---
 
@@ -78,15 +77,17 @@ A series of diagnostic plots were generated for the Linear Regression model to a
 This plot compares the R² scores of three regression models — Linear Regression (LR), Decision Tree (DT), and k-Nearest Neighbors (kNN). It visualizes both the mean training scores and test scores, helping identify overfitting or underfitting. The Decision Tree model achieved the highest accuracy but may be slightly overfitted compared to kNN.
 
 
-![Model Comparison](./Images/model_comparison_scores.png)
+![Model Comparison](./Images/model_comparison.png)
 
 
 
-### 🔹 Q-Q Plot of Residuals
+<h3>🔹 Q-Q Plot of Residuals</h3>
+<p>
 The Q-Q plot compares the residuals to a normal distribution. Significant curvature and deviation from the diagonal line suggest non-normality in the residuals — a violation of linear regression assumptions.
+</p>
 
+<img src="./Images/qq_plot.png" width="600" alt="Q-Q Plot">
 
-![Q-Q Plot](<img src="./Images/model_comparison_scores.png" width="600"/>)
 
 
 ### 🔹 Feature Importance (Linear Regression Coefficients)
