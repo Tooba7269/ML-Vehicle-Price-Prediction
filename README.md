@@ -30,7 +30,7 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
 - **Exploratory Data Analysis (EDA)**
 - **Feature Engineering & Encoding**
 - **Data Cleaning & Outlier Handling**
-- **Model Training & Tuning**
+- **Model Training & Tuning (Linear, Decision Tree, kNN)**
 - **Validation, Testing, & Residual Analysis**
 - **Model Comparison & Feature Importance**
 
@@ -38,13 +38,13 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
 
 ## 🔍 Dataset Description
 
-- ~400,000 anonymized car adverts
-- Key features: `make`, `model`, `mileage`, `fuel type`, `year of registration`, `vehicle condition`, `price`, etc.
-- Available via:
-  - ✅ [Adverts.csv (google drive link)](https://docs.google.com/spreadsheets/d/1JOq6Is1VLsvQ_LwsqtPUqT3G-j_05k9XzwJSOO1wU4o/edit?usp=sharing)
-  - ✅ `adverts.csv.zip` file (in repo)
+- ~400,000 anonymized vehicle advertisements
+- Includes: make, model, mileage, fuel type, registration year, vehicle condition, price, etc.
 
-> **Disclaimer:** This dataset is licensed for academic use **only** as part of the MMU coursework. Do not redistribute.
+📌 Source: AutoTrader UK, shared through institutional access
+🔒 Note: This dataset was provided under a non-commercial academic-use license. It is not redistributed in this repository. All results, code, and visualizations are derived from this dataset in compliance with those terms.
+
+
 
 ---
 
@@ -70,6 +70,27 @@ Develop, evaluate, and compare predictive models for vehicle pricing using histo
   - Visual model comparison using bar and line plots
 
 ---
+
+### 📸 Visual Insights
+A series of diagnostic plots were generated for the Linear Regression model to assess its assumptions and performance:
+
+🔹 Residual Distribution
+Shows the spread of prediction errors; highlights slight skewness and kurtosis.
+                      
+
+🔹 Q-Q Plot of Residuals
+Tests normality visually — slight deviation from the red line indicates non-normal residuals.
+
+
+🔹 Feature Coefficients (Linear Model)
+Displays the relative importance of each feature in influencing price.
+
+
+🔹 Actual vs Predicted Plot
+Measures the closeness between predicted and actual values.
+
+---
+
 
 ## 🛠 Tech Stack
 
